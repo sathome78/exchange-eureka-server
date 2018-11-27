@@ -23,7 +23,7 @@ pipeline {
       agent any
       steps {
         sh 'docker tag roadtomoon/exrates-eureka-server:$ENVIRONMENT localhost:5000/eureka-server:$ENVIRONMENT'
-        sh 'docker push localhost:5000/sbadminservice:$ENVIRONMENT'
+        sh 'docker push localhost:5000/eureka-server:$ENVIRONMENT'
       }
     }
     stage('Deploy container') {
