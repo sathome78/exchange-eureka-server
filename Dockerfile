@@ -5,6 +5,7 @@ ARG ENVIRONMENT
 
 RUN mkdir -p eureka
 COPY ./target/eureka.jar ${APP_PATH}/eureka.jar
+RUN echo ${ENVIRONMENT}
 COPY ./target/config/${ENVIRONMENT}/application.yml ${APP_PATH}/application.yml
 
 ARG CONFIG_FILE_PATH="-Dspring.config.location="${ENVIRONMENT}"/application.yml"
