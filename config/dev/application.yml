@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+logging:
+  level:
+    com.netflix.eureka: off
+    com.netflix.discovery: off
